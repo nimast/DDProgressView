@@ -8,23 +8,22 @@
 
 #if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
+
 #elif TARGET_OS_MAC
 #import "AppKitCompatibility.h"
 #endif
 
-@interface DDProgressView : UIView
-{
+@interface DDProgressView : UIView {
 @private
-	float progress ;
-	UIColor *innerColor ;
-	UIColor *outerColor ;
-    UIColor *emptyColor ;
+    float progress;
+    UIColor *innerColor;
+    UIColor *emptyColor;
+    BOOL displayedWhenStopped;
 }
 
-@property (nonatomic,retain) UIColor *innerColor ;
-@property (nonatomic,retain) UIColor *outerColor ;
-@property (nonatomic,retain) UIColor *emptyColor ;
-@property (nonatomic,assign) float progress ;
-@property (nonatomic,assign) CGFloat preferredFrameHeight ;
+@property(nonatomic, retain) UIColor *innerColor;
+@property(nonatomic, retain) UIColor *emptyColor;
+@property(nonatomic, assign) float progress;
+@property(nonatomic, assign) BOOL displayedWhenStopped;
 
 @end
